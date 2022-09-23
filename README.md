@@ -7,8 +7,7 @@ This project serves as a Benchmark for assessing limitations of MOT metrics, usi
 Tracking metrics are considered as an objective measure, thereby we ignore potential
 biases and limitations in the tracking metrics themselves.
 
-We propose benchmarking tracking metrics by replacing the tracking algorithm with synthetic tracking results emulating real-world tracking errors. We select a set of frequently occurring real-world tracking errors and provide instructions
-on how to simulate them.
+We propose benchmarking tracking metrics by replacing the tracking algorithm with synthetic tracking results emulating real-world tracking errors. We select a set of frequently occurring real-world tracking errors and provide instructions on how to simulate them.
 
 
 ## Getting Started
@@ -29,7 +28,8 @@ PROJECT_NAME
 - create a folder e.g. PROJECT_NAME
 - change into folder PROJECT_NAME
 - create the folders data; results
-- clone the gitlab repository
+- change into the folder synth_tracks_bm
+- clone the gitlab repository into that folder
 
           git clone https://github.com/mrhartmann/benchmark-mot-metrics.git
 
@@ -42,7 +42,7 @@ Create the virtual environment (either activate conda in cmd window or use the t
     
  activate environment https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#existing-environment
  
- ### 4) add CTC evaluatation metrics
+ ### 3) add CTC evaluatation metrics
  the metrics are provided as executables and can be downloaded here: 
     
 http://public.celltrackingchallenge.net/software/EvaluationSoftware.zip
@@ -57,10 +57,11 @@ PROJECT_NAME
      └─── CTC_eval
           └─── Win
           └─── ...
+     └─── ...Python Scripts...
 └─── results
 ```
 
-### 5) Get data sets
+### 4) Get data sets
 the data sets Fluo-N2DH-SIM+ and Fluo-N3DH-SIM+ can be downloaded here 
 
 http://data.celltrackingchallenge.net/training-datasets/Fluo-N2DH-SIM+.zip
@@ -77,6 +78,7 @@ PROJECT_NAME
      └─── CTC_eval
           └─── Win
           └─── ...
+     └─── ...Python Scripts...
 └─── results
 ```
 Note: other datasets can be added similarly, however theses usually do not include a ground truth for all data sets (have a look at the 0x_GT SEG and TRA data for that)
@@ -99,11 +101,11 @@ Karlsruhe: Karlsruhe Institute of Technology (KIT), 2022._
 
 ## Acknowledgments
 
-The Project uses the TrackEval Repo 
+The Project uses functionalities of the following:
 
 * [TrackEval](https://github.com/JonathonLuiten/TrackEval) is used for the evaluation of MOT metrics, including HOTA (developed by Jonathon Luiten and Arne Hoffhues, [HOTA Paper](https://link.springer.com/article/10.1007/s11263-020-01375-2))
 
-* [cocoapi/pycocotools](https://github.com/cocodataset/cocoapi/tree/master/PythonAPI/pycocotool) is used for converting segmentation masks to compressed RLEs and back
+* [cocoapi/pycocotools](https://github.com/cocodataset/cocoapi) is used for converting segmentation masks to compressed RLEs and back
 
 
 
