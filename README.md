@@ -1,6 +1,7 @@
 # Benchmark for MOT Metrics using Synthetically Degraded Tracking Data
 
 This project serves as a Benchmark for assessing limitations of MOT metrics, using synthetically degraded tracking data. 
+It was published with the corresponding paper: [Simulation of Synthetically Degraded Tracking Data to Benchmark MOT Metrics](https://www.researchgate.net/publication/365838978_Simulation_of_Synthetically_Degraded_Tracking_Data_to_Benchmark_MOT_Metrics) on the 32. Workshop Computational Intelligence in Berlin.
 
 
 ## Description
